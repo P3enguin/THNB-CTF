@@ -63,6 +63,11 @@ The flag;
 
 ![alt text](https://i.imgur.com/lNEkF40.png)
 
+
+
+
+
+
 # brothersinarm
 
 First lets try to execute this binary;
@@ -127,6 +132,13 @@ lets check
 
 ez
 
+
+
+
+
+
+
+
 # Packer
 
 Executing this one , It does nothing.
@@ -158,6 +170,11 @@ I Copied those lines , put them in a file.
 
 
 And using linux commands I got the flag 
+
+
+
+
+
 
 # toddler
 
