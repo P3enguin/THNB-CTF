@@ -116,9 +116,9 @@ I went to see where nbr gets this value .
 
 Oh so if `nbr=0x5bb` and the character of our input is `d` , nbr gets that value and exit the loop. The letter `d` should be the last character of the input we are looking for;
 
-but when he get the 0x5bb value ??? 
+But where he gets the  value `0x5bb` ??? 
 
-anyway I kept tracking nbr values by going on the reverse order of the loop .I ended up getting this : `PinkFl0yd`
+I kept tracking nbr values by going on the reverse order of the loop .I ended up getting this : `PinkFl0yd`
 
 lets check
 
@@ -133,16 +133,16 @@ Executing this one , It does nothing.
 
 Trying to debug it with gdb , no main entry;
 
-since the name is Packer , I did some research about packing executables . I found that you can compress your ELF files, to make it hard to analyse and reverse, and also decrease the size of the executable.
+Since the name is Packer , I did some research about packing executables . I found that you can compress your ELF files, to make it hard to analyse and reverse, and also decrease the size of the executable.
 
-using the `upx` tool we can decompress it;
+Using the `upx` tool we can decompress it;
 
 `upd -d packer`
 
 ![alt text](https://i.imgur.com/rimXUI5.png)
 
 
-after compressing it We can find the main function now .
+After compressing It We can find the main function now .
 
 Lets take a look at the binary using gdb;
 
@@ -157,12 +157,13 @@ I Copied those lines , put them in a file.
 ![alt text](https://i.imgur.com/p4sXfRJ.png)
 
 
-and using linux commands I got the flag 
+And using linux commands I got the flag 
 
 # toddler
 
 This one is easy, Unfortunatly I deleted the binary but I still remember what can be done;
 
-After debugging , I notice that there is a string called "secret_message" , the program them compate every `byte-10` of this string with the bytes
+  After debugging , I notice that there is a string called "s3cret_message" , the program them compare every `byte - 10` of this string with the bytes
 of our input, If they are all equal we get the flag;
-SO basically, you just need to decrement 10 from every byte of that buffer . 
+
+SO basically, you just need to decrement 10 from every byte of that buffer and you will get the flag. 
