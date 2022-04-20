@@ -180,7 +180,7 @@ And using linux commands I got the flag
 
 This one is easy, Unfortunatly I deleted the binary but I still remember what can be done;
 
-  After debugging , I notice that there is a string called "s3cret_message" , the program them compare every `byte - 10` of this string with the bytes
+  After debugging , I notice that there is a string called "s3cret_message" , the program then compare every `byte - 10` of this string with the bytes
 of our input, If they are all equal we get the flag;
 
 SO basically, you just need to decrement 10 from every byte of that buffer and you will get the flag. 
